@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aeroporto Inteligente - Diagnóstico</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        .painel {
+            border: 5px solid yellow;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* ERRO 1: feito  */
+        button {
+            background: #2c3e50;
+            color: #ffffff;
+            border: 1px solid white;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="painel">
+        <h1>PAINEL DE EMBARQUE</h1>
+        <p id="info-voo">Status: Aguardando sistema...</p>
+        <button onclick="atualizarPainel()">ATUALIZAR VOO</button>
+    </div>
+
+    <script>
+        function atualizarPainel() {
+            // ERRO 2: tava não
+            const destino = "Curitiba (CWB)";
+
+            // ERRO 3: feito
+            document.querySelector("#info-voo").innerText = "Destino Confirmado: " + destino;
+
+            console.log("Sistema atualizado com sucesso!");
+        }
+
+        /*
+           RESPONDA AQUI:
+           Atributos do Objeto Avião:
+           Métodos do Objeto Avião:
+        */
+    </script>
+</body>
+
+</html>
