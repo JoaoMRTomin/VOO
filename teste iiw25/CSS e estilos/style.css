@@ -1,35 +1,114 @@
+/* Configurações Gerais - Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    font-family: sans-serif;
-    background-color: #f0f2f5;
+    background-color: #e0e6ed; /* Um cinza azulado que lembra aeroporto */
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Container que segura os dois cards de avião */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
 }
 
-.painel-voo {
+/* Estilo dos Cards (Painéis de Voo) */
+.card {
     background: white;
+    border-radius: 12px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+    width: 320px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-top: 8px solid #3498db; /* Cor azul aviação */
 }
 
-.area-aviao {
-    margin: 20px 0;
-    transition: transform 0.5s;
+/* Diferenciando o painel de carga por cor */
+#painel-carga {
+    border-top-color: #f39c12; /* Cor laranja para carga */
 }
 
-.controles button {
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #34495e;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+strong {
+    color: #2c3e50;
+}
+
+/* Estilo dos Status (Destaque visual) */
+span {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+/* Estilo dos Botões */
+button {
+    width: 100%;
     padding: 10px;
-    cursor: pointer;
-    margin: 5px;
+    margin-top: 10px;
     border: none;
-    border-radius: 5px;
-    background: #007bff;
+    border-radius: 6px;
+    background-color: #3498db;
     color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.controles button:hover {
-    background: #0056b3;
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Botão específico para ativar supersônico (efeito de perigo/velocidade) */
+button[onclick*="ativarSupersonico"] {
+    background-color: #e74c3c;
+}
+
+button[onclick*="ativarSupersonico"]:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo dos Inputs (Peso da carga) */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #f39c12;
+}
+
+/* Pequena animação para quando algo mudar */
+span {
+    transition: all 0.5s ease;
 }
